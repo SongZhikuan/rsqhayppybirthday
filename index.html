@@ -14,11 +14,24 @@
     <script type="text/javascript" src="./css/functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="./css/love.js" charset="utf-8"></script>
     <style type="text/css">
+        @font-face {
+            font-family: 'iconfont';  /* project id 1566003 */
+            src: url('https://at.alicdn.com/t/font_1566003_pegow8ncmrn.eot');
+            src: url('https://at.alicdn.com/t/font_1566003_pegow8ncmrn.eot?#iefix') format('embedded-opentype'),
+            url('https://at.alicdn.com/t/font_1566003_pegow8ncmrn.woff2') format('woff2'),
+            url('https://at.alicdn.com/t/font_1566003_pegow8ncmrn.woff') format('woff'),
+            url('https://at.alicdn.com/t/font_1566003_pegow8ncmrn.ttf') format('truetype'),
+            url('https://at.alicdn.com/t/font_1566003_pegow8ncmrn.svg#iconfont') format('svg');
+        }
+        .define-font {
+            font-family: iconfont;
+        }
         html, body {
             height: 100%;
             margin: 0;
             overflow: hidden;
         }
+
         .STYLE1 {
             color: #666666
         }
@@ -30,39 +43,48 @@
             background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
             background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
         }
+
         .say {
             color: white !important;
+            font-size: 18px;
         }
+
         .XDD {
             position: fixed;
             top: 5vh;
             left: 5vw;
         }
+
         .wm1 {
             position: fixed;
-            top: 40vh;
+            top: 50vh;
             left: 25vw;
         }
+
         .wm2 {
             position: fixed;
-            top: 40vh;
+            top: 50vh;
             left: 35vw;
         }
+
         .wm3 {
             position: fixed;
-            top: 40vh;
+            top: 50vh;
             left: 45vw;
         }
+
         .wm4 {
             position: fixed;
-            top: 40vh;
+            top: 50vh;
             left: 55vw;
         }
+
         .wm5 {
             position: fixed;
-            top: 40vh;
+            top: 50vh;
             left: 65vw;
         }
+
         .wm1 img, .wm2 img, .wm3 img, .wm4 img, .wm5 img {
             height: 220px;
             background-size: cover;
@@ -74,13 +96,52 @@
             /*margin-bottom: 20px;*/
             transition: all 1.0s;
         }
+        .circle {
+            animation-name: mycircle;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-play-state: running;
 
+            -webkit-animation-name: mycircle;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: normal;
+            -webkit-animation-play-state: running;
+        }
+        .stopcircle {
+            animation-play-state: paused;
+            -webkit-animation-play-state: paused;
+        }
+        @keyframes mycircle {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes mycircle /* Safari and Chrome */
+        {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
         .cs {
             position: fixed;
             top: 5vh;
             right: 5vw;
             /*margin: auto;*/
         }
+
         img#logo, img#logo1 {
             /*width: 128px;*/
             height: 160px;
@@ -92,6 +153,9 @@
             /*margin-top: 20px;*/
             /*margin-bottom: 20px;*/
             transition: all 1.0s;
+        }
+        img#logo {
+            height: 200px;
         }
         img#logo2 {
             /*width: 128px;*/
@@ -105,6 +169,7 @@
             /*margin-bottom: 20px;*/
             transition: all 1.0s;
         }
+
         #logo:hover {
             box-shadow: 0 0 10px #fff;
             -webkit-box-shadow: 0 0 19px #fff;
@@ -115,51 +180,92 @@
             -o-transform: rotate(360deg); /* Opera */
             filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
         }
-        .DD
-        {
+
+        .DD {
             /*width:100px;*/
             /*height:100px;*/
-            background:red;
-            position:relative;
-            animation-name:myfirst;
-            animation-duration:60s;
-            animation-timing-function:linear;
-            animation-delay:2s;
-            animation-iteration-count:infinite;
-            animation-direction:alternate;
-            animation-play-state:running;
+            background: red;
+            position: relative;
+            animation-name: myfirst;
+            animation-duration: 60s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running;
             /* Safari and Chrome: */
-            -webkit-animation-name:myfirst;
-            -webkit-animation-duration:60s;
-            -webkit-animation-timing-function:linear;
-            -webkit-animation-delay:2s;
-            -webkit-animation-iteration-count:infinite;
-            -webkit-animation-direction:alternate;
-            -webkit-animation-play-state:running;
+            -webkit-animation-name: myfirst;
+            -webkit-animation-duration: 60s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-play-state: running;
         }
 
-        @keyframes myfirst
-        {
-            0%   {background:red; left:0; top:0;}
-            25%  {background:yellow; left:0; top:calc(100vh - 10vh - 170px);}
-            50%  {background:blue; left:calc(100vw - 10vw - 170px); top:calc(100vh - 10vh - 170px);}
-            75%  {background:green; left:0; top:calc(100vh - 10vh - 170px);}
-            100% {background:red; left:0; top:0;}
+        @keyframes myfirst {
+            0% {
+                background: red;
+                left: 0;
+                top: 0;
+            }
+            25% {
+                background: yellow;
+                left: 0;
+                top: calc(100vh - 10vh - 170px);
+            }
+            50% {
+                background: blue;
+                left: calc(100vw - 10vw - 170px);
+                top: calc(100vh - 10vh - 170px);
+            }
+            75% {
+                background: green;
+                left: 0;
+                top: calc(100vh - 10vh - 170px);
+            }
+            100% {
+                background: red;
+                left: 0;
+                top: 0;
+            }
         }
 
         @-webkit-keyframes myfirst /* Safari and Chrome */
         {
-            0%   {background:red; left:0; top:0;}
-            25%  {background:yellow; left:0; top:calc(100vh - 10vh - 170px);}
-            50%  {background:blue; left:calc(100vw - 10vw - 170px); top:calc(100vh - 10vh - 170px);}
-            75%  {background:green; left:0; top:calc(100vh - 10vh - 170px);}
-            100% {background:red; left:0; top:0;}
+            0% {
+                background: red;
+                left: 0;
+                top: 0;
+            }
+            25% {
+                background: yellow;
+                left: 0;
+                top: calc(100vh - 10vh - 170px);
+            }
+            50% {
+                background: blue;
+                left: calc(100vw - 10vw - 170px);
+                top: calc(100vh - 10vh - 170px);
+            }
+            75% {
+                background: green;
+                left: 0;
+                top: calc(100vh - 10vh - 170px);
+            }
+            100% {
+                background: red;
+                left: 0;
+                top: 0;
+            }
         }
     </style>
 </head>
 <body class="body--ready" style="height: 100%;">
-<div id="pp" style="position: fixed;left: 2vw;top: 2vh;border-radius: 20px; height: 20px; width: 20px;background-color: #fcfcfc">
-
+<div id="pp"
+     class="define-font"
+     style="position: fixed;left: 2vw;top: 2vh;font-size: 38px;color: red;cursor: pointer">
+    &#xe600;
 </div>
 <div class="wm1" id="wm1" style="visibility: hidden;z-index: 9000;">
     <img class="" src="img/IMG_20190913_222235.jpg">
@@ -184,11 +290,7 @@
     </div>
 </div>
 <div class="cs" id="cs" style="visibility: hidden;z-index: 9000;">
-    <div style="display: flex; justify-content: center; align-items: center">
-        <div style="width: 170px; height: 170px; text-align: center; border-radius: 50%">
-            <img src="img/1576072341431.jpeg" id="logo">
-        </div>
-    </div>
+    <img src="img/1576072341431.jpeg" id="logo">
 </div>
 <audio autoplay="autopaly " id="myAudio">
     <source src="music/love.mp3" type="audio/mp3"/>
@@ -225,16 +327,31 @@
 </div>
 
 <script>
-  $('#pp').bind("click", function(){
-    console.log('fdlsfhdsdhfsfld');
-    var x = document.getElementById("myAudio");
-    x.play();
+  $('#pp').bind("click", function () {
+    var player = $("#myAudio")[0];
+    if (player.paused){ /*如果已经暂停*/
+      player.play(); /*播放*/
+    }else {
+      player.pause();/*暂停*/
+    }
+    if ($('#pp').hasClass('circle')) {
+      // $('#pp').removeClass('circle');
+     if ( $('#pp').hasClass('stopcircle')) {
+        $('#pp').removeClass('stopcircle');
+      } else {
+        $('#pp').addClass('stopcircle');
+      }
+    } else {
+      $('#pp').addClass('circle');
+    }
   });
+
   function btnChange() {
     console.log('fdlsfhdsdhfsfld');
     var x = document.getElementById("myAudio");
     x.play();
   }
+
   window.onload = function () {
     console.log('fsldfl;sfjolsk,.mfdm;ds,mf;');
     // $('#btn').trigger("myClick");
@@ -243,45 +360,45 @@
 </script>
 
 <script>
-    var pics = [];
-    var urls = [
-        'img/IMG_20190913_222235.jpg',
-        'img/mmexport1568474217438.jpg',
-        'img/mmexport1568471030354.jpg',
-        'img/mmexport1568474241505.jpg',
-        'img/IMG_20190915_145037.jpg',
-        'img/1576072341431.jpeg',
-          'img/IMG_20190720_215100.jpg',
-          'img/IMG_20190729_181539.jpg',
-          'img/IMG_20190729_181548.jpg',
-          'img/IMG_20190730_002802.jpg',
-          'img/IMG_20190805_201202.jpg',
-          'img/IMG_20190812_080214.jpg',
-          'img/IMG_20190823_181305.jpg',
-          'img/IMG_20190823_181309.jpg',
-          'img/IMG_20190823_181338.jpg',
-          'img/IMG_20190824_194026.jpg',
-          'img/IMG_20190826_124138.jpg',
-          'img/IMG_20190826_203337.jpg',
-          'img/IMG_20190826_203403.jpg',
-          'img/IMG_20190826_203934.jpg',
-          'img/IMG_20190827_082453.jpg',
-          'img/IMG_20190827_082456.jpg',
-          'img/IMG_20190827_082503.jpg',
-          'img/IMG_20190827_082522.jpg',
-          'img/IMG_20190901_152223.jpg',
-          'img/IMG_20190901_152427.jpg',
-          'img/IMG_20190901_152614.jpg',
-          'img/IMG_20190904_213742.jpg',
-          'img/IMG_20190906_213432.jpg',
-          'img/IMG_20190906_213526.jpg',
-          'img/IMG_20190915_144955.jpg',
-          'img/IMG_20190915_145103.jpg',
-          'img/IMG_20190921_185022.jpg',
-          'img/IMG_20190921_185440.jpg',
-          'img/IMG_20191113_230437.jpg',
-          'img/IMG_20191117_170249.jpg'
-    ];
+  var pics = [];
+  var urls = [
+    'img/IMG_20190913_222235.jpg',
+    'img/mmexport1568474217438.jpg',
+    'img/mmexport1568471030354.jpg',
+    'img/mmexport1568474241505.jpg',
+    'img/IMG_20190915_145037.jpg',
+    'img/1576072341431.jpeg',
+    'img/IMG_20190720_215100.jpg',
+    'img/IMG_20190729_181539.jpg',
+    'img/IMG_20190729_181548.jpg',
+    'img/IMG_20190730_002802.jpg',
+    'img/IMG_20190805_201202.jpg',
+    'img/IMG_20190812_080214.jpg',
+    'img/IMG_20190823_181305.jpg',
+    'img/IMG_20190823_181309.jpg',
+    'img/IMG_20190823_181338.jpg',
+    'img/IMG_20190824_194026.jpg',
+    'img/IMG_20190826_124138.jpg',
+    'img/IMG_20190826_203337.jpg',
+    'img/IMG_20190826_203403.jpg',
+    'img/IMG_20190826_203934.jpg',
+    'img/IMG_20190827_082453.jpg',
+    'img/IMG_20190827_082456.jpg',
+    'img/IMG_20190827_082503.jpg',
+    'img/IMG_20190827_082522.jpg',
+    'img/IMG_20190901_152223.jpg',
+    'img/IMG_20190901_152427.jpg',
+    'img/IMG_20190901_152614.jpg',
+    'img/IMG_20190904_213742.jpg',
+    'img/IMG_20190906_213432.jpg',
+    'img/IMG_20190906_213526.jpg',
+    'img/IMG_20190915_144955.jpg',
+    'img/IMG_20190915_145103.jpg',
+    'img/IMG_20190921_185022.jpg',
+    'img/IMG_20190921_185440.jpg',
+    'img/IMG_20191113_230437.jpg',
+    'img/IMG_20191117_170249.jpg'
+  ];
   var S = {
     init: function (callback) {
       // callback();
@@ -347,7 +464,9 @@
             };
     var cancelAnimationFrame = window.cancelAnimationFrame
         || window.mozCancelAnimationFrame
-        || function(id) { clearTimeout(id) };
+        || function (id) {
+          clearTimeout(id)
+        };
     var requestId;
     return {
       init: function (el) {
@@ -365,7 +484,7 @@
         requestId = requestFrame.call(window, this.loop.bind(this));
         // console.log(requestId);
       },
-      stop: function() {
+      stop: function () {
         cancelAnimationFrame(requestId);
       },
       adjustCanvas: function () {
@@ -973,7 +1092,7 @@
             count = 0;
           }
           $("#logo")[0].src = urls[count];
-          console.log('1111111111111111111111111111111',urls[count], $("#logo"), $("#logo").src);
+          console.log('1111111111111111111111111111111', urls[count], $("#logo"), $("#logo").src);
           count++;
         }
       }));
